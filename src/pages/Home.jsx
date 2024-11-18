@@ -1,32 +1,29 @@
 import axios from "axios"
+import Routelayout from "../components/Routelayout";
 
 
 
 const Home = () => {
 
-
-  const getData = async () => {
-
-    try {
-      const response = await axios.get('https://www.themealdb.com/api/json/v1/1/categories.php');
-      console.log(response.data);
-
-    } catch (err) {
-
-    }
-
+const getdata=async() =>{
+  try {
+  
+  } catch (error) {
+    
   }
-
-  getData();
-  console.log('hello jee');
-
-
-
+}
+ 
+axios.get('https://www.themealdb.com/api/json/v1/1/categories.php')
+.then((res)=>{
+  console.log(res.data);
+}).catch((err)=>{
+  console.log(err);
+});
 
 
   return (
     <div>
-
+<Routelayout/>
 
 
 
