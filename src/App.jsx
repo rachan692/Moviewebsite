@@ -3,17 +3,11 @@ import { createBrowserRouter, Outlet, RouterProvider } from 'react-router-dom'
 import Home from './pages/Home'
 import About from './pages/About'
 import Header from './components/Header';
-
-import Mainpage from './Nested/Mainpage';
-import Firstpage from './Nested/Firstpage';
-import Secondpage from './Nested/Secondpage';
-import Call from './pages/Call';
-
-
-
-
-
-
+import Routelayout from './components/Routelayout';
+import CategoryItems from './pages/CategoryItems';
+import ItemDetails from './pages/ItemDetails';
+import Products from './pages/Products';
+import ProductDetail from './pages/ProductDetail';
 // import Header from './components/Header';
 
 
@@ -24,19 +18,36 @@ const App = () => {
 
     {
       path:'/',
-      element:<Home/>,
+      element:<Routelayout/>,
     children:[
  {
-  path:'contact-page',
-  element:<Call/>
+  index:true,
+  element:<Home/>
  },
+ 
+ {
+  path:`category-items/:category`,
+  element:<CategoryItems/>
+},
+
+{
+  path:`item-detail/:id`,
+  element:<ItemDetails/>
+},
+
+
   {
     path:'about-page',
     element:<About/>
   },
-  
-
-
+  {
+    path:'product-page',
+    element:<Products/>
+  },
+ {
+  path:'product-detail/:id',
+  element:<ProductDetail/>
+ },
    <Outlet/>,
     
     ]

@@ -13,9 +13,9 @@ const Header = () => {
       
       <nav className='space-x-4 '>  
         
-        <NavLink to={'/about-page'} className={'text-xl '} >About</NavLink>
+        <NavLink to={'/about-page'} className={'text-xl hover:bg-white hover:text-black'} >About</NavLink>
       
-      <NavLink to={'/contact-page'}>Contact</NavLink>
+      <NavLink to={'/product-page'} className={'text-xl hover:bg-white hover:text-black'}> Products</NavLink>
       </nav>   
       
       
